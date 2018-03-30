@@ -6189,6 +6189,7 @@ fun! s:NetrwMaps(islocal)
    nnoremap <buffer> <silent> <nowait> v	:call <SID>NetrwSplit(5)<cr>
    nnoremap <buffer> <silent> <nowait> x	:<c-u>call netrw#BrowseX(<SID>NetrwBrowseChgDir(1,<SID>NetrwGetWord(),0),0)"<cr>
    nnoremap <buffer> <silent> <nowait> X	:<c-u>call <SID>NetrwLocalExecute(expand("<cword>"))"<cr>
+   nnoremap <buffer> <silent> <nowait> y	:<c-u>call setreg(v:register,<SID>NetrwBrowseChgDir(1,<SID>NetrwGetWord(),0))"<cr>
 "   " local insert-mode maps
 "   inoremap <buffer> <silent> <nowait> a	<c-o>:call <SID>NetrwHide(1)<cr>
 "   inoremap <buffer> <silent> <nowait> c	<c-o>:exe "NetrwKeepj lcd ".fnameescape(b:netrw_curdir)<cr>
@@ -6362,6 +6363,7 @@ fun! s:NetrwMaps(islocal)
    nnoremap <buffer> <silent> <nowait> U	:<c-u>call <SID>NetrwBookHistHandler(5,b:netrw_curdir)<cr>
    nnoremap <buffer> <silent> <nowait> v	:call <SID>NetrwSplit(2)<cr>
    nnoremap <buffer> <silent> <nowait> x	:<c-u>call netrw#BrowseX(<SID>NetrwBrowseChgDir(0,<SID>NetrwGetWord()),1)<cr>
+   nnoremap <buffer> <silent> <nowait> y	:<c-u>call setreg(v:register,<SID>NetrwBrowseChgDir(0,<SID>NetrwGetWord(),0))"<cr>
 "   " remote insert-mode maps
 "   inoremap <buffer> <silent> <nowait> <cr>	<c-o>:call <SID>NetrwBrowse(0,<SID>NetrwBrowseChgDir(0,<SID>NetrwGetWord()))<cr>
 "   inoremap <buffer> <silent> <nowait> <c-l>	<c-o>:call <SID>NetrwRefresh(0,<SID>NetrwBrowseChgDir(0,'./'))<cr>
