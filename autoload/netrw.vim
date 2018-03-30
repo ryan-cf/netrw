@@ -4905,7 +4905,7 @@ fun! s:NetrwBrowseChgDir(islocal,newdir,...)
     call remove(w:netrw_treedict,treedir)
 "    call Decho("tree-list: removed     entry<".treedir."> from treedict",'~'.expand("<slnum>"))
 "    call Decho("tree-list: yielding treedict<".string(w:netrw_treedict).">",'~'.expand("<slnum>"))
-    let dirname= w:netrw_treetop
+    let dirname=treedir
    else
     " go down one directory
     let dirname= substitute(treedir,'/*$','/','')
